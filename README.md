@@ -1,2 +1,2 @@
-# Documentation
-Antivirus and Endpoint Central installation guide
+# Antivirus and Endpoint Central installation guide.
+
