@@ -3,7 +3,7 @@
 This comprehensive guide covers the preparation and configuration of Ubuntu machines, domain join installation, ManageEngine Endpoint Central installation, and antivirus installation.
 
 ## Prerequisites: Before moving to the installation setup, please make sure that the following things are done on the machine.
-.
+
 Ubuntu 20.04 LTS or later (recommended: Ubuntu 22.04 LTS)
 
 Administrative privileges (sudo access)
@@ -18,20 +18,21 @@ Hostname change as per the laptop no like:  COMPND-LTP-****
 
 ## Table of Contents
 
-System Preparation
+1. System Preparation
 
-Domain Join Configuration
+2. Domain Join Configuration
 
-ManageEngine Endpoint Central Setup
+3. ManageEngine Endpoint Central Setup
 
-Antivirus Installation
+4. Antivirus Installation
 
-Post-Installation Verification
+5. Post-Installation Verification
 
-Troubleshooting
+6. Troubleshooting
 
-## System Preparation: Open the terminal, run the commands mentioned below.
+## 1.  System Preparation: Open the terminal, run the commands mentioned below.
 # Update package lists
+
 ```
 sudo apt update
 ```
@@ -42,7 +43,7 @@ sudo apt update
 sudo apt upgrade -y
 ```
 
-## Domain Join Configuration: We have two options –
+## 2. Domain Join Configuration: We have two options –
 1. Manual setup
 2. Set up through commands. 
 
@@ -85,20 +86,136 @@ Step 1. Run the command mentioned below:
 sudo apt install -y realmd sssd sssd-tools libnss-sss libpam-sss adcli samba-common-bin oddjob oddjob-mkhomedir packagekit
 
 ```
+
 Step 2. To join the domain, use this command:
+
 ```
 sudo realm join --user=<DOMAIN_USERNAME> iipl.com
 
 ```
+
 ![shared image (5)](https://github.com/user-attachments/assets/fc8ea8ea-338d-4343-91c1-b279e6a514e0)
 
 Example: sudo realm join --user=17204 iipl.com
 
 Once you run this command, the system will prompt for the username and password. Enter the password specified in the command.
 
-# Note: When you start typing the password, it will not be visible on the command line. Simply type it and press Enter.”
+# Note: When you start typing the password, it will not be visible on the command line. Simply type it and press Enter.
 
 Now will get the successful addition in the IIPL Domain.
+
+## 3.  ManageEngine Endpoint Central Setup
+
+Step 1. Open the My file.
+
+Step 2. Click on other location.
+     
+  ![shared image (4)](https://github.com/user-attachments/assets/261bb140-70da-4622-8eb1-e6601bda8861)
+
+Step 3. Now, enter the share folder location 
+
+```
+smb://10.1.5.114
+
+```
+
+![shared image (17)](https://github.com/user-attachments/assets/2c3b4383-f506-4de5-9d0e-d7918dd5914f)
+
+Step 4. The system will prompt you to enter the user name and password to enter inside 10.1.5.114.
+
+![shared image (9)](https://github.com/user-attachments/assets/a40bebe6-efbb-4df7-8c53-dfd39a9e8d53)
+
+Step 5: Now copy the required AV and EC package to the Download forlder, or you can move any other folder as per your convenience.
+
+To verify whether the package is available inside the forlder, run the mentioned command
+
+```
+cd Downloads/
+```
+```
+ls
+```
+
+![shared image (3)](https://github.com/user-attachments/assets/484588f6-cd5e-4074-990f-1af3affb830e)
+
+
+Step 6: Run the command mentioned below
+
+```
+
+cd Downloads/
+
+cd NoidaIndia_UEMSLinuxAgent/
+
+# This command is used to navigate into the folder where the installation package is available.
+
+chmod +x UEMS_LinuxAgent.bin
+
+# This command runs to provide the execute permission to the package
+```
+![shared image (14)](https://github.com/user-attachments/assets/468b37db-d4e1-43c0-af14-fedd22e093da)
+
+Step 7: Now run the installation package.
+
+```
+sudo ./UEMS_LinuxAgent.bin
+
+```
+![shared image (8)](https://github.com/user-attachments/assets/c3c17252-7790-4e1a-bcef-6b03a320f460)
+
+The EC Manage Engine has been installed successfully. Kindly check the same in the portal and approve it.
+
+## 4. Antivirus Installation
+
+Step 1. Now, enter the Downloads folder where the Antivirus package is located .
+
+```
+cd Downloads/
+
+```
+To verify the package is available for not we can use the mentioned below command 
+```
+ls
+```
+
+```
+mv 'falcon-sensor_7.24.0-17706_amd64 (1).deb' falcon-sensor_7.24.0-17706_amd64.deb
+
+```
+![shared image (13)](https://github.com/user-attachments/assets/36e502dc-07c9-4026-90c7-1408d9e981e8)
+
+```
+sudo apt install ./falcon-sensor_7.24.0-17706_amd64.deb
+```
+![shared image (6)](https://github.com/user-attachments/assets/6b6d272a-11c5-4cd3-bc48-3e3a1feb0ad4)
+
+After running this, the antivirus was installed on the laptop.but its not connected with linked to your organization's Falcon cloud via the CID (Customer ID
+
+Step 2: Now we have to mention the antivirus key to connect with to your organization's Falcon cloud via the CID (Customer ID).
+
+sudo /opt/CrowdStrike/falconctl -s --cid=YOUR-CID-HERE
+
+```
+sudo /opt/CrowdStrike/falconctl -s --cid= DB321762BC9C4B3B8B270A3C1BB24361-33
+```
+
+```
+sudo systemctl restart falcon-sensor.service
+```
+
+![shared image (16)](https://github.com/user-attachments/assets/38f75803-e379-49e3-a156-a01b174b236d)
+
+The installation process for the Antivirus is completed.
+
+## 5. Post-Installation Verification
+
+```
+sudo systemctl status falcon-sensor.service
+```
+
+![shared image (19)](https://github.com/user-attachments/assets/af983fd6-d792-4a3a-9541-e7a116726bf5)
+
+You can check the status of the laptop to confirm if it is running properly. All setup has now been completed.
 
 
 
