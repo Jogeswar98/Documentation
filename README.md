@@ -31,13 +31,32 @@ sudo apt update
 sudo apt upgrade -y
 ```
 
-## Domain Join Configuration: 
+## Domain Join Configuration: We have two options –
+1. Manual setup
+2. Set up through commands. 
 
-# Install packages needed for domain operations
 ```
 sudo apt install -y realmd sssd sssd-tools libnss-sss libpam-sss adcli samba-common-bin oddjob oddjob-mkhomedir packagekit
+
 ```
 ![shared image (11)](https://github.com/user-attachments/assets/48652fc6-8e78-4bd6-ad51-7bed9c581e9e)
+
+## Note :
+#  After running the below-mentioned command, the domain join feature will be enabled, allowing us to add the system to the domain. Once the command is executed, the domain join feature will be activated, and it will appear as an Enterprise login. I've attached the reference image.
+
+1. Manual Setup
+
+Step 1:
+
+i. Go to System Settings
+ii. Navigate to Users
+iii. Click on Add User
+
+![shared image (20)](https://github.com/user-attachments/assets/b32d9fdb-9e1b-4368-8e00-847a4f9cf8ff)
+
+iv . Now click on Enteriser login 
+![shared image (15)](https://github.com/user-attachments/assets/0803015e-04f3-4a64-9cc6-930e3804846e)
+
 
 
 
