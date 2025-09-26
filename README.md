@@ -3,20 +3,31 @@
 This comprehensive guide covers the preparation and configuration of Ubuntu machines, domain join installation, ManageEngine Endpoint Central installation, and antivirus installation.
 
 ## Prerequisites: Before moving to the installation setup, please make sure that the following things are done on the machine.
+.
 Ubuntu 20.04 LTS or later (recommended: Ubuntu 22.04 LTS)
+
 Administrative privileges (sudo access)
+
 Network connectivity to domain controllers
+
 Internet access for package downloads
+
 Hostname change as per the laptop no like:  COMPND-LTP-****
 
 ![shared image (7)](https://github.com/user-attachments/assets/691e460b-edf7-4a5d-82c5-42703e701807)
 
 ## Table of Contents
+
 System Preparation
+
 Domain Join Configuration
+
 ManageEngine Endpoint Central Setup
+
 Antivirus Installation
+
 Post-Installation Verification
+
 Troubleshooting
 
 ## System Preparation: Open the terminal, run the commands mentioned below.
