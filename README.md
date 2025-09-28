@@ -112,6 +112,8 @@ Once you run this command, the system will prompt for the username and password.
 
 You will now get the successful addition in the IIPL Domain.
 
+---
+
 ## 3.  ManageEngine Endpoint Central Setup
 
 Step 1. Open the My Files.  
@@ -135,7 +137,6 @@ Step 4. The system will prompt you to enter the user name and password to enter 
 Step 5: Now copy the required AV and EC package to the Downloads folder, or you can move it to any other folder as per your convenience.
 
 To verify whether the package is available inside the folder, run the mentioned commands:
-
 
 ```
 cd Downloads/
@@ -171,7 +172,9 @@ sudo ./UEMS_LinuxAgent.bin
 
 ![shared image (8)](https://github.com/user-attachments/assets/c3c17252-7790-4e1a-bcef-6b03a320f460)
 
-The ManageEngine Endpoint Central has been installed successfully. Kindly check the same in the portal and approve it.
+The ManageEngine Endpoint Central has been installed successfully. Please verify this in the portal and approve it.
+
+---
 
 ## 4. Antivirus Installation
 
@@ -223,7 +226,7 @@ sudo systemctl status falcon-sensor.service
 
 ![shared image (19)](https://github.com/user-attachments/assets/af983fd6-d792-4a3a-9541-e7a116726bf5)
 
-You can check the status of the laptop to confirm if it is running properly. All setup has now been completed.
+You can check the laptop's status to confirm if it is running properly. All setup has now been completed.
 
 
 
