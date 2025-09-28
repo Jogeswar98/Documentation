@@ -1,34 +1,39 @@
-# Laptop preparation guide for the Ubuntu Machine 
+# Laptop Preparation Guide for the Ubuntu Machine 
 
 This comprehensive guide covers the preparation and configuration of Ubuntu machines, domain join installation, ManageEngine Endpoint Central installation, and antivirus installation.
 
-## Prerequisites: Before moving to the installation setup, please make sure that the following things are done on the machine.
+---
 
-Ubuntu 20.04 LTS or later (recommended: Ubuntu 22.04 LTS)
+## Prerequisites 
+Before moving to the installation setup, please make sure that the following things are done on the machine.
 
-Administrative privileges (sudo access)
-
-Network connectivity to domain controllers
-
-Internet access for package downloads
-
-Hostname change as per the laptop no like:  COMPND-LTP-****
+- Ubuntu 20.04 LTS or later (**recommended: Ubuntu 22.04 LTS**)
+- Administrative privileges (sudo access)
+- Network connectivity to domain controllers
+- Internet access for package downloads
+- Hostname changed as per the laptop number format: `COMPND-LTP-****`
 
 ![shared image (7)](https://github.com/user-attachments/assets/691e460b-edf7-4a5d-82c5-42703e701807)
 
+---
+
 ## Table of Contents
 
-1. System Preparation
+1. System Preparation  
+2. Domain Join Configuration  
+3. ManageEngine Endpoint Central Setup  
+4. Antivirus Installation  
+5. Post-Installation Verification  
+6. Troubleshooting  
 
-2. Domain Join Configuration
+---
 
-3. ManageEngine Endpoint Central Setup
+## 1. System Preparation
 
-4. Antivirus Installation
+Open the terminal and run the commands mentioned below.
 
-5. Post-Installation Verification
+### Update package lists
 
-6. Troubleshooting
 
 ## 1.  System Preparation: Open the terminal, run the commands mentioned below.
 # Update package lists
