@@ -125,7 +125,6 @@ Step 3. Now, enter the share folder location:
 
 ```
 smb://10.1.5.114
-
 ```
 
 ![shared image (17)](https://github.com/user-attachments/assets/2c3b4383-f506-4de5-9d0e-d7918dd5914f)
@@ -167,7 +166,6 @@ Step 7: Now run the installation package.
 
 ```
 sudo ./UEMS_LinuxAgent.bin
-
 ```
 
 ![shared image (8)](https://github.com/user-attachments/assets/c3c17252-7790-4e1a-bcef-6b03a320f460)
@@ -182,7 +180,6 @@ Step 1. Now, enter the Downloads folder where the Antivirus package is located:
 
 ```
 cd Downloads/
-
 ```
 To verify the package is available, we can use the command mentioned below 
 ```
@@ -191,7 +188,6 @@ ls
 
 ```
 mv 'falcon-sensor_7.24.0-17706_amd64 (1).deb' falcon-sensor_7.24.0-17706_amd64.deb
-
 ```
 ![shared image (13)](https://github.com/user-attachments/assets/36e502dc-07c9-4026-90c7-1408d9e981e8)
 
