@@ -114,7 +114,7 @@ You will now get the successful addition in the IIPL Domain.
 
 ---
 
-## 3.  ManageEngine Endpoint Central Setup
+## 3. ManageEngine Endpoint Central Setup
 
 Step 1. Open the My Files.  
 Step 2. Click on Other Locations.  
