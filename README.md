@@ -34,26 +34,28 @@ Open the terminal and run the commands mentioned below.
 
 ### Update package lists
 
-
-## 1.  System Preparation: Open the terminal, run the commands mentioned below.
-# Update package lists
-
 ```
 sudo apt update
 ```
 ![shared image (12)](https://github.com/user-attachments/assets/4f94335c-4d0d-4a17-824a-a41bafe53776)
 
-# Upgrade existing packages
+### Upgrade existing packages
+
 ```
 sudo apt upgrade -y
 ```
 
-## 2. Domain Join Configuration: We have two options –
-1. Manual setup
-2. Set up through commands. 
+---
 
-## Note :
-#  After running the below-mentioned command, once the command is executed, the domain join feature will be activated, and it will appear as an Enterprise login. This command is mendatory for the both steps once you run this command then  I've attached the reference image.
+## 2. Domain Join Configuration
+
+We have two options for domain configuration:
+1. Manual setup  
+2. Setup through commands  
+
+### Note:  
+After running the below-mentioned command, the domain join feature will be activated and will appear as an **Enterprise login**.  
+This step is mandatory for both methods.
 
 ```
 sudo apt install -y realmd sssd sssd-tools libnss-sss libpam-sss adcli samba-common-bin oddjob oddjob-mkhomedir packagekit
@@ -61,29 +63,29 @@ sudo apt install -y realmd sssd sssd-tools libnss-sss libpam-sss adcli samba-com
 ```
 ![shared image (11)](https://github.com/user-attachments/assets/48652fc6-8e78-4bd6-ad51-7bed9c581e9e)
 
-# Opt 1. Manual Setup
+![shared image (11)](https://github.com/user-attachments/assets/48652fc6-8e78-4bd6-ad51-7bed9c581e9e)
 
-Step 1: Go to System Settings
+---
 
-Step 2: Navigate to Users
+### Opt 1. Manual Setup
 
-Step 3:  Click on Add User
-
-Step 4: Now, click on Enteriser login
+- Step 1: Go to **System Settings**  
+- Step 2: Navigate to **Users**  
+- Step 3: Click on **Add User**  
+- Step 4: Click on **Enterprise login**  
 
 ![shared image (20)](https://github.com/user-attachments/assets/e074f426-2ffb-42ce-b38f-0d02c9136240)
 
-Step 5: Now, enter the Domain name IIPL.COM.
-
-Step 6: Enter the user name ( EMP ID ) and the Password
+- Step 5: Enter the domain name: `IIPL.COM`  
+- Step 6: Enter the **Username (EMP ID)** and **Password**  
 
 ![shared image (15)](https://github.com/user-attachments/assets/0803015e-04f3-4a64-9cc6-930e3804846e)
 
-Now you will successfully add the domain to the laptop. 
+Now you will successfully add the domain
 
-# If it's not working, then go with the setup of through commands.
+**If it's not working, then go with the setup through commands.**
 
-# Opt 2. Set up through commands 
+### Opt 2. Set up through commands
 
 Step 1. Run the command mentioned below:
 
@@ -103,21 +105,21 @@ sudo realm join --user=<DOMAIN_USERNAME> iipl.com
 
 Example: sudo realm join --user=17204 iipl.com
 
-Once you run this command, the system will prompt for the username and password. Enter the password specified in the command.
 
-# Note: When you start typing the password, it will not be visible on the command line. Simply type it and press Enter.
+Once you run this command, the system will prompt for the username and password. Enter the password specified in the command.  
 
-Now will get the successful addition in the IIPL Domain.
+**Note:** When you start typing the password, it will not be visible on the command line. Simply type it and press Enter.
+
+You will now get the successful addition in the IIPL Domain.
 
 ## 3.  ManageEngine Endpoint Central Setup
 
-Step 1. Open the My file.
-
-Step 2. Click on other location.
+Step 1. Open the My Files.  
+Step 2. Click on Other Locations.  
      
-  ![shared image (4)](https://github.com/user-attachments/assets/261bb140-70da-4622-8eb1-e6601bda8861)
+![shared image (4)](https://github.com/user-attachments/assets/261bb140-70da-4622-8eb1-e6601bda8861)
 
-Step 3. Now, enter the share folder location 
+Step 3. Now, enter the share folder location:
 
 ```
 smb://10.1.5.114
@@ -130,34 +132,34 @@ Step 4. The system will prompt you to enter the user name and password to enter 
 
 ![shared image (9)](https://github.com/user-attachments/assets/a40bebe6-efbb-4df7-8c53-dfd39a9e8d53)
 
-Step 5: Now copy the required AV and EC package to the Download forlder, or you can move any other folder as per your convenience.
+Step 5: Now copy the required AV and EC package to the Downloads folder, or you can move it to any other folder as per your convenience.
 
-To verify whether the package is available inside the forlder, run the mentioned command
+To verify whether the package is available inside the folder, run the mentioned commands:
+
 
 ```
 cd Downloads/
 ```
+
 ```
 ls
 ```
-
 ![shared image (3)](https://github.com/user-attachments/assets/484588f6-cd5e-4074-990f-1af3affb830e)
-
 
 Step 6: Run the command mentioned below
 
 ```
-
 cd Downloads/
-
-cd NoidaIndia_UEMSLinuxAgent/
-
-# This command is used to navigate into the folder where the installation package is available.
-
-chmod +x UEMS_LinuxAgent.bin
-
-# This command runs to provide the execute permission to the package
 ```
+
+```
+cd NoidaIndia_UEMSLinuxAgent/   # This command is used to navigate into the folder where the installation package is available.
+```
+
+```
+chmod +x UEMS_LinuxAgent.bin    # This command runs to provide the execute permission to the package
+```
+
 ![shared image (14)](https://github.com/user-attachments/assets/468b37db-d4e1-43c0-af14-fedd22e093da)
 
 Step 7: Now run the installation package.
@@ -166,19 +168,20 @@ Step 7: Now run the installation package.
 sudo ./UEMS_LinuxAgent.bin
 
 ```
+
 ![shared image (8)](https://github.com/user-attachments/assets/c3c17252-7790-4e1a-bcef-6b03a320f460)
 
-The EC Manage Engine has been installed successfully. Kindly check the same in the portal and approve it.
+The ManageEngine Endpoint Central has been installed successfully. Kindly check the same in the portal and approve it.
 
 ## 4. Antivirus Installation
 
-Step 1. Now, enter the Downloads folder where the Antivirus package is located .
+Step 1. Now, enter the Downloads folder where the Antivirus package is located:
 
 ```
 cd Downloads/
 
 ```
-To verify the package is available for not we can use the mentioned below command 
+To verify the package is available, we can use the command mentioned below 
 ```
 ls
 ```
