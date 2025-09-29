@@ -23,9 +23,8 @@ Before moving to the installation setup, please make sure that the following thi
 2. [Domain Join Configuration](#2-domain-join-configuration)  
 3. [ManageEngine Endpoint Central Setup](#3-manageengine-endpoint-central-setup)  
 4. [Antivirus Installation](#4-antivirus-installation)  
-5. [Post-Installation Verification](#5-post-installation-verification)  
-6. [Troubleshooting](#6-troubleshooting)  
-
+5. [Post-Installation Verification](#5-post-installation-verification)
+6. 
 ---
 
 ## 1. System Preparation
