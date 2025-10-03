@@ -7,7 +7,7 @@ This comprehensive guide covers the preparation and configuration of Ubuntu mach
 ## Prerequisites 
 Before moving to the installation setup, please make sure that the following things are done on the machine.
 
-- Ubuntu 20.04 LTS or later (**recommended: Ubuntu 22.04 LTS**)
+- Ubuntu 22 or Ubuntu 24
 - Administrative privileges (sudo access)
 - Network connectivity to domain controllers
 - Internet access for package downloads
